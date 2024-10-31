@@ -58,7 +58,9 @@ class Trainer:
         for callback in self.callbacks.get(onevent, []):
             callback(self)
 
-    def run(self):
+    def run(self,ckpt_path=''):
+        if ckpt_path:
+            model = torch.load(ckpt_path)
         model, config = self.model, self.config
 
         # setup the optimizer
