@@ -32,7 +32,7 @@ class JSONLDataset(Dataset):
 
 file_path = '/home/bms22386/minGPT/data.jsonl'
 print('Making dataset...')
-train_dataset = JSONLDataset(file_path, split='train', test_size=10)
+train_dataset = JSONLDataset(file_path)
 
 # create a GPT instance
 from mingpt.model import GPT
